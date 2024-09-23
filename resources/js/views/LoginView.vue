@@ -19,14 +19,43 @@ const handleLogin = async () => {
 };
 </script>
 <template>
-    <div>
-        <h1>Login View</h1>
-        <form @submit.prevent="handleLogin">
-            <label for="email">Email:</label>
-            <input type="text" v-model="email" />
-            <label for="password">Password:</label>
-            <input type="password" v-model="password" />
-            <button type="submit">Login</button>
-        </form>
+    <div class="main-container">
+        <div>
+            <h1>Direkthandeln</h1>
+            <p>Willkomen zurück</p>
+        </div>
+        
+        <div>
+            <form @submit.prevent="handleLogin">
+                <div>
+                <label for="email">Email:</label>
+                <input type="text" v-model="email" />
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" v-model="password" />
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                <div>
+                    <p>
+                        Wenn du noch keinen Account hast
+                    </p>
+                </div>
+            </form>
+        </div>
     </div>
 </template>
+
+<style scoped>
+    .main-container{
+        display: flex;
+        flex-direction: column;
+
+        height: 852px;
+        width: 393px;
+
+        background-color: #D9D9D9;
+    }
+</style>
