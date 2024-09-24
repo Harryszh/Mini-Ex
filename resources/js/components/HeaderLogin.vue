@@ -1,13 +1,25 @@
+<script>
+import { RouterLink } from 'vue-router';
+export default {
+  name: 'HeaderLogin',
+  // ... andere Optionen
+};
+</script>
+
 
 <template>
-        <div>
+        <div class="nav">
             <P>Mini Ex</P>        
         </div>
 
 </template>
 
 <style>
-    
+    .nav {
+        display: flex;
+
+        height: 60px;
+    }
 
 </style>
 

@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import { useAuthStore } from "@/store/AuthStore";
 import router from "@/router";
+/* import {HeaderLogin} from "../components/HeaderLogin.vue" */
+
 const { login, getAuthUser } = useAuthStore();
 
 const email = ref("test@example.com");
@@ -20,20 +22,24 @@ const handleLogin = async () => {
 </script>
 <template>
     <div class="main-container">
+        <!-- <div>
+            <HeaderLogin/>
+        </div> -->
+        
         <div>
             <h1>Direkthandeln</h1>
             <p>Willkomen zurück</p>
         </div>
         
-        <div>
+        <div class="login-box">
             <form @submit.prevent="handleLogin">
                 <div>
-                <label for="email">Email:</label>
-                <input type="text" v-model="email" />
+                    <label class="label" for="email">Email:</label>
+                    <input class="input" type="text" v-model="email" />
                 </div>
                 <div>
-                    <label for="password">Password:</label>
-                    <input type="password" v-model="password" />
+                    <label class="label" for="password">Password:</label>
+                    <input class="input" type="password" v-model="password" />
                 </div>
                 <div>
                     <button type="submit">Login</button>
@@ -49,13 +55,36 @@ const handleLogin = async () => {
 </template>
 
 <style scoped>
+   
+
+    
     .main-container{
         display: flex;
         flex-direction: column;
 
         height: 852px;
         width: 393px;
+        
 
         background-color: #D9D9D9;
+    
     }
+    .login-box{
+        background-color: #FFFF;
+        margin-left: 5%;
+        margin-right: 5%;
+        grid: 10px;
+
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .label{
+        padding: 3%;
+    }
+    .input{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
 </style>
