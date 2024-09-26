@@ -41,7 +41,7 @@ const handleLogin = async () => {
                     <label class="label" for="password">Password:</label>
                     <input class="input" type="password" v-model="password" />
                 </div>
-                <div>
+                <div button>
                     <button type="submit">Login</button>
                 </div>
                 <div>
@@ -90,7 +90,10 @@ const handleLogin = async () => {
     .input{
         display: flex;
         flex-direction: column;
-        
+        padding: 3%;
+    }
+    .button{
+        padding-top: 16px;
     }
 
 </style>
