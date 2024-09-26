@@ -26,7 +26,7 @@ const handleLogin = async () => {
             <HeaderLogin/>
         </div> -->
         
-        <div>
+        <div class="title-container">
             <h1>Direkthandeln</h1>
             <p>Willkomen zurück</p>
         </div>
@@ -46,7 +46,8 @@ const handleLogin = async () => {
                 </div>
                 <div>
                     <p>
-                        Wenn du noch keinen Account hast
+                        Wenn du noch keinen Account hast 
+                        <RouterLink to="/register" v-if="!authUser">Sign up</RouterLink>
                     </p>
                 </div>
             </form>
@@ -69,11 +70,16 @@ const handleLogin = async () => {
         background-color: #D9D9D9;
     
     }
+    .title-container{
+        padding-left: 5%;
+        margin-top: 10%;
+    }
     .login-box{
         background-color: #FFFF;
         margin-left: 5%;
         margin-right: 5%;
         grid: 10px;
+        margin-top: 10%;
 
         /* display: flex;
         flex-direction: column; */

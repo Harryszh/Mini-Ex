@@ -1,13 +1,14 @@
 <script>
 import { RouterLink } from 'vue-router';
 export default {
-  name: 'HeaderLogin',
-  // ... andere Optionen
+  name: 'Header',
+  
 };
 </script>
 
 
 <template>
+    
         <div class="nav">
             <P>Mini Ex</P>        
         </div>
@@ -16,9 +17,15 @@ export default {
 
 <style>
     .nav {
+        background-color: #FFFF;
+        height: 100px;
+        
         display: flex;
-
-        height: 60px;
+        align-items: center;
+        
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        
     }
 
 </style>
