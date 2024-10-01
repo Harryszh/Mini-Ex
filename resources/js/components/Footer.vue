@@ -18,5 +18,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        bottom: 0;
+        position: fixed;
+        width: 393px;
+        
+    
     }
 </style>

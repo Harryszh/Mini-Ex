@@ -33,18 +33,18 @@ const handleLogin = async () => {
         
         <div class="login-box">
             <form @submit.prevent="handleLogin">
-                <div>
+                <div class="div-box">
                     <label class="label" for="email">Email:</label>
                     <input class="input" type="text" v-model="email" />
                 </div>
-                <div>
+                <div class="div-box">
                     <label class="label" for="password">Password:</label>
                     <input class="input" type="password" v-model="password" />
                 </div>
-                <div button>
+                <div class="button">
                     <button type="submit">Login</button>
                 </div>
-                <div>
+                <div class="p">
                     <p>
                         Wenn du noch keinen Account hast 
                         <RouterLink to="/register" v-if="!authUser">Sign up</RouterLink>
@@ -56,10 +56,7 @@ const handleLogin = async () => {
 </template>
 
 <style scoped>
-   
-
-    
-    .main-container{
+   .main-container{
         display: flex;
         flex-direction: column;
 
@@ -84,16 +81,24 @@ const handleLogin = async () => {
         /* display: flex;
         flex-direction: column; */
     }
-    .label{
-        padding: 3%;
+    .div-box{
+        padding-left: 3%;
+        padding-top: 2%;
     }
+    /* .label{
+        padding: 3%;
+    } */
     .input{
         display: flex;
         flex-direction: column;
         padding: 3%;
     }
     .button{
-        padding-top: 16px;
+        
+        padding-right: 3%;
+        padding-top: 5%;
+        display: flex;
+        justify-content: end;
     }
 
 </style>

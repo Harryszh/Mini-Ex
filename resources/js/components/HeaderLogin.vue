@@ -23,9 +23,12 @@ export default {
         display: flex;
         align-items: center;
         
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
+        /* border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px; */
         
+    }
+    p{
+        margin-left: 10%;
     }
 
 </style>
