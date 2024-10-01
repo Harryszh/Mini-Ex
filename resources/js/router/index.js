@@ -7,11 +7,17 @@ import HomeView from "../views/HomeView.vue";
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
-        {
+       {
+            path: "/login",
+            name: "login",
+            component: () => import("../views/LoginView.vue"),
+        },
+       
+        /*  {
             path: "/",
             name: "home",
             component: HomeView,
-        },
+        }, */
         {
             path: "/dashboard",
             name: "dashboard",
@@ -22,11 +28,7 @@ const router = createRouter({
             // die Meta-Informationen verwenden wir um den Zugriff zu schützen
             meta: { requiresAuth: true },
         },
-        {
-            path: "/login",
-            name: "login",
-            component: () => import("../views/LoginView.vue"),
-        },
+        
     ],
 });
 

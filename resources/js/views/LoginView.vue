@@ -83,7 +83,8 @@ const handleLogin = async () => {
     }
     .div-box{
         padding-left: 3%;
-        padding-top: 2%;
+        
+        padding-top: 3%;
     }
     /* .label{
         padding: 3%;
@@ -95,10 +96,14 @@ const handleLogin = async () => {
     }
     .button{
         
-        padding-right: 3%;
+        padding-right: 10%;
         padding-top: 5%;
         display: flex;
         justify-content: end;
+    }
+    .p{
+       
+       
     }
 
 </style>
